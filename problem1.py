@@ -12,6 +12,7 @@ loss_counter = 0
 final_results = " "
 games = 0 
 
+#This counts the wins and losses. Current correction code is non functioning.
 for games in range(6):
   results = input("Please enter in the results of your six games: \n")
   if results == "w":
@@ -22,9 +23,11 @@ for games in range(6):
     print("Please input either \"w\" or \"l\". ")
   final_results = str(results) + str(final_results)
 
+#This is just to keep an easier record of wins and losses.
 print(final_results)
 print("You won " + str(win_counter) + " times, and lost " + str(loss_counter) + " times.")
 
+#featuring a complicated system of win counters and loss counters to prevent errors. This checks the wins and losses and prints results.
 if win_counter == 6 or win_counter == 5 and loss_counter < 2: 
   print("Your team is in Group 1")
 if win_counter == 3 or win_counter == 4 and loss_counter < 3:
